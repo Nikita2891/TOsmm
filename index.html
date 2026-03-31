@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Выездное ТО спецтехники | Экскаваторы, погрузчики, бульдозеры | ТО с вашими или нашими материалами</title>
+    <meta name="description" content="Выездное ТО спецтехники: экскаваторов, погрузчиков, бульдозеров, мини-погрузчиков. Работаем с вашими материалами ИЛИ предоставляем свои. Осмотр по 36 пунктам. Тюмень и область.">
+    <meta name="keywords" content="выездное то спецтехники, то экскаватора, то погрузчика, то бульдозера, то мини погрузчика, то материалом заказчика, мобильная бригада, замена масла">
+    <meta name="author" content="ООО СММ">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ooo-smm.ru/to-mobilnaya-brigada">
+    
+    <meta property="og:title" content="Выездное ТО спецтехники | Экскаваторы, погрузчики, бульдозеры">
+    <meta property="og:description" content="ТО с вашими или нашими материалами. Осмотр по 36 пунктам. Работаем и в цеху, и в поле.">
+    <meta property="og:type" content="website">
+    
+    <meta name="theme-color" content="#1e3c72">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.5;
+            color: #1f2937;
+            background-color: #ffffff;
+            scroll-behavior: smooth;
+        }
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 40px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-primary {
+            background: #e67e22;
+            color: white;
+            box-shadow: 0 4px 12px rgba(230, 126, 34, 0.3);
+        }
+        .btn-primary:hover {
+            background: #d35400;
+            transform: translateY(-2px);
+        }
+        .header {
+            background: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            background: rgba(255,255,255,0.95);
+        }
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #1e3c72;
+        }
+        .logo span {
+            color: #e67e22;
+        }
+        .contact-phone {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #1e3c72;
+            text-decoration: none;
+        }
+        .hero {
+            padding: 60px 0 70px;
+            background: linear-gradient(135deg, #f8fafc 0%, #eef2f5 100%);
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #0f172a;
+        }
+        .hero-highlight {
+            color: #e67e22;
+            border-bottom: 3px solid #e67e22;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: #334155;
+            margin-bottom: 32px;
+        }
+        .hero-badge {
+            background: #e67e2210;
+            padding: 8px 16px;
+            border-radius: 40px;
+            display: inline-block;
+            font-weight: 500;
+            margin-bottom: 20px;
+            color: #e67e22;
+        }
+        .hero-stats {
+            display: flex;
+            gap: 24px;
+            margin-top: 32px;
+            flex-wrap: wrap;
+        }
+        .section {
+            padding: 80px 0;
+        }
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+        .section-sub {
+            text-align: center;
+            color: #475569;
+            max-width: 700px;
+            margin: 0 auto 48px;
+        }
+        .two-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin-top: 40px;
+        }
+        .option-card {
+            background: white;
+            border-radius: 32px;
+            padding: 40px 32px;
+            text-align: center;
+            box-shadow: 0 20px 35px -10px rgba(0,0,0,0.1);
+            border: 1px solid #e2e8f0;
+            transition: 0.2s;
+        }
+        .option-card:hover {
+            transform: translateY(-5px);
+        }
+        .option-card i {
+            font-size: 3rem;
+            color: #e67e22;
+            margin-bottom: 24px;
+        }
+        .option-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 16px;
+        }
+        .price {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #e67e22;
+            margin: 20px 0 10px;
+        }
+        .price small {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #64748b;
+        }
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 32px;
+        }
+        .card {
+            background: #ffffff;
+            padding: 32px 24px;
+            border-radius: 28px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+            border: 1px solid #eef2f6;
+            text-align: center;
+        }
+        .card i {
+            font-size: 2.5rem;
+            color: #e67e22;
+            margin-bottom: 20px;
+        }
+        .card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+        }
+        .service-list {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 16px;
+            background: #f8fafc;
+            padding: 32px;
+            border-radius: 32px;
+        }
+        .service-list li {
+            list-style: none;
+            padding: 8px 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .service-list i {
+            color: #e67e22;
+        }
+        .brands-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 40px;
+        }
+        .brand-item {
+            background: white;
+            padding: 10px 24px;
+            border-radius: 60px;
+            font-weight: 600;
+            color: #1e3c72;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+        }
+        .tech-search {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 0 20px;
+        }
+        .tech-tag {
+            background: #e67e22;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: 0.2s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .tech-tag:hover {
+            background: #d35400;
+            transform: translateY(-2px);
+        }
+        .contact-bar {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            border-radius: 48px;
+            text-align: center;
+            padding: 48px 24px;
+            color: white;
+        }
+        .contact-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 32px;
+        }
+        footer {
+            background: #0f172a;
+            color: #94a3b8;
+            padding: 40px 0;
+            text-align: center;
+        }
+        .image-placeholder {
+            background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+            border-radius: 32px;
+            padding: 40px;
+            text-align: center;
+            color: white;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .image-placeholder i {
+            font-size: 5rem;
+            margin-bottom: 20px;
+        }
+        .checklist-badge {
+            background: #e67e2210;
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+        @media (max-width: 768px) {
+            .hero-grid, .two-options {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .section-title {
+                font-size: 1.8rem;
+            }
+            .service-list {
+                grid-template-columns: 1fr;
+            }
+            .contact-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            .tech-search {
+                gap: 12px;
+            }
+            .tech-tag {
+                padding: 8px 20px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="container header-inner">
+        <div class="logo">ООО <span>СММ</span></div>
+        <div>
+            <a href="tel:89129219797" class="contact-phone"><i class="fas fa-phone-alt"></i> 8 912 921-97-97</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="container hero-grid">
+            <div>
+                <div class="hero-badge"><i class="fas fa-tools"></i> Работаем и в цеху, и в поле</div>
+                <h1>Выездное ТО спецтехники <span class="hero-highlight">с вашими или нашими материалами</span></h1>
+                <p>Экскаваторы, погрузчики, бульдозеры, мини-погрузчики. Работаем по двум схемам: вы покупаете масла/фильтры сами <strong>(экономия до 40%)</strong> или мы предоставляем свои расходные материалы.</p>
+                <a href="tel:89129219797" class="btn btn-primary"><i class="fas fa-phone-alt"></i> Позвонить и вызвать бригаду</a>
+                <div class="hero-stats">
+                    <div class="stat">⭐ 70+ единиц техники в месяц</div>
+                    <div class="stat">📍 Выезд по Тюмени и области</div>
+                    <div class="stat">🔧 Осмотр по 36 пунктам</div>
+                </div>
+            </div>
+            <div>
+                <div class="image-placeholder">
+                    <i class="fas fa-truck"></i>
+                    <h3>Мобильная бригада</h3>
+                    <p>Выезжаем на объект с полным оснащением</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок для поиска по моделям и названиям техники -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <h2 class="section-title">Обслуживаем любую спецтехнику</h2>
+            <div class="tech-search">
+                <a href="#form" class="tech-tag"><i class="fas fa-excavator"></i> Экскаватор</a>
+                <a href="#form" class="tech-tag"><i class="fas fa-tractor"></i> Погрузчик</a>
+                <a href="#form" class="tech-tag"><i class="fas fa-bulldozer"></i> Бульдозер</a>
+                <a href="#form" class="tech-tag"><i class="fas fa-cubes"></i> Мини-погрузчик</a>
+                <a href="#form" class="tech-tag"><i class="fas fa-truck-moving"></i> Фронтальный погрузчик</a>
+                <a href="#form" class="tech-tag"><i class="fas fa-dharmachakra"></i> Гусеничная техника</a>
+                <a href="#form" class="tech-tag"><i class="fas fa-oil-can"></i> Гидравлические экскаваторы</a>
+                <a href="#form" class="tech-tag"><i class="fas fa-charging-station"></i> Телескопические погрузчики</a>
+            </div>
+            <p class="section-sub" style="margin-top: 20px;">Не нашли свою модель? Позвоните — подберем решение под любую технику</p>
+        </div>
+    </section>
+
+    <!-- Два варианта работы с расходниками 50/50 -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Два удобных формата обслуживания</h2>
+            <div class="section-sub">Выберите то, что выгоднее именно вам</div>
+            <div class="two-options">
+                <div class="option-card">
+                    <i class="fas fa-box-open"></i>
+                    <h3>ТО с вашими материалами</h3>
+                    <p>Вы предоставляете масла, фильтры, жидкости. Мы только профессионально выполняем работы.</p>
+                    <div class="price">от 7 500 ₽</div>
+                    <p><small>только за работу и выезд бригады</small></p>
+                    <p style="margin-top: 16px;">✅ Экономия до 40%<br>✅ Никаких наценок на расходники<br>✅ Используете только проверенные бренды</p>
+                </div>
+                <div class="option-card">
+                    <i class="fas fa-oil-can"></i>
+                    <h3>ТО с нашими материалами</h3>
+                    <p>Не хотите закупать сами? Полностью обеспечим всем необходимым: масла, фильтры, жидкости.</p>
+                    <div class="price">от 21 000 ₽</div>
+                    <p><small>работа + расходники под ключ</small></p>
+                    <p style="margin-top: 16px;">✅ Оригинальные и качественные аналоги<br>✅ Доставим всё на объект<br>✅ Один договор — полный сервис</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Бренды техники -->
+    <section class="section" style="background: #f9fafb;">
+        <div class="container">
+            <h2 class="section-title">Работаем с любой техникой</h2>
+            <div class="brands-grid">
+                <span class="brand-item">Caterpillar</span>
+                <span class="brand-item">Komatsu</span>
+                <span class="brand-item">Hitachi</span>
+                <span class="brand-item">Volvo</span>
+                <span class="brand-item">Liebherr</span>
+                <span class="brand-item">XCMG</span>
+                <span class="brand-item">Lonking</span>
+                <span class="brand-item">Shantui</span>
+                <span class="brand-item">Hyundai</span>
+                <span class="brand-item">Doosan</span>
+                <span class="brand-item">JCB</span>
+                <span class="brand-item">Zoomlion</span>
+                <span class="brand-item">БелАЗ</span>
+                <span class="brand-item">Четра</span>
+                <span class="brand-item">ДСТ-Урал</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Что входит в ТО + осмотр по 36 пунктам -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Что входит в выездное ТО</h2>
+            <div class="service-list">
+                <li><i class="fas fa-check-circle"></i> Замена моторного масла</li>
+                <li><i class="fas fa-check-circle"></i> Замена трансмиссионной жидкости</li>
+                <li><i class="fas fa-check-circle"></i> Замена гидравлического масла</li>
+                <li><i class="fas fa-check-circle"></i> Замена масляного, топливного, воздушного фильтров</li>
+                <li><i class="fas fa-check-circle"></i> Смазка шарниров, подшипников</li>
+                <li><i class="fas fa-check-circle"></i> Контроль натяжения гусениц/ремней</li>
+                <li><i class="fas fa-check-circle"></i> <strong>Осмотр по чек-листу (акт дефектовки/осмотра) по 36 пунктам</strong></li>
+                <li><i class="fas fa-check-circle"></i> Слив отработки</li>
+            </div>
+            <div class="checklist-badge" style="display: block; text-align: center; margin-top: 24px; background: #e67e2215; width: fit-content; margin-left: auto; margin-right: auto;">
+                📋 Предоставляем акт дефектовки после каждого осмотра
+            </div>
+        </div>
+    </section>
+
+    <!-- Примеры цен на разные виды ТО -->
+    <section class="section" style="background: #f1f5f9;">
+        <div class="container">
+            <h2 class="section-title">Примеры стоимости ТО</h2>
+            <div class="section-sub">*Окончательную стоимость уточняйте у менеджера</div>
+            <div class="two-options">
+                <div class="option-card">
+                    <i class="fas fa-excavator"></i>
+                    <h3>ТО экскаватора</h3>
+                    <div class="price">от 7 500 ₽</div>
+                    <p>с вашими материалами</p>
+                    <div class="price" style="font-size: 1.5rem;">от 21 000 ₽</div>
+                    <p>с нашими материалами</p>
+                </div>
+                <div class="option-card">
+                    <i class="fas fa-tractor"></i>
+                    <h3>ТО погрузчика</h3>
+                    <div class="price">от 7 500 ₽</div>
+                    <p>с вашими материалами</p>
+                    <div class="price" style="font-size: 1.5rem;">от 21 000 ₽</div>
+                    <p>с нашими материалами</p>
+                </div>
+                <div class="option-card">
+                    <i class="fas fa-bulldozer"></i>
+                    <h3>ТО бульдозера</h3>
+                    <div class="price">от 11 500 ₽</div>
+                    <p>с вашими материалами</p>
+                    <div class="price" style="font-size: 1.5rem;">от 32 000 ₽</div>
+                    <p>с нашими материалами</p>
+                </div>
+                <div class="option-card">
+                    <i class="fas fa-cubes"></i>
+                    <h3>ТО мини-погрузчика</h3>
+                    <div class="price">от 5 500 ₽</div>
+                    <p>с вашими материалами</p>
+                    <div class="price" style="font-size: 1.5rem;">от 16 000 ₽</div>
+                    <p>с нашими материалами</p>
+                </div>
+            </div>
+            <p class="section-sub" style="margin-top: 24px;">📞 Позвоните — рассчитаем точную стоимость под вашу технику за 5 минут</p>
+        </div>
+    </section>
+
+    <!-- Преимущества мобильной бригады -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Почему выбирают наши мобильные бригады</h2>
+            <div class="cards-grid">
+                <div class="card"><i class="fas fa-building"></i><h3>Работаем и в цеху, и в поле</h3><p>Обслужим технику как в стационаре, так и прямо на объекте.</p></div>
+                <div class="card"><i class="fas fa-file-invoice"></i><h3>Официальный договор</h3><p>Закрывающие документы для юрлиц и ИП.</p></div>
+                <div class="card"><i class="fas fa-users"></i><h3>Мастера с опытом 10+ лет</h3><p>Специализируемся на двигателях, гидравлике, трансмиссии.</p></div>
+                <div class="card"><i class="fas fa-clipboard-list"></i><h3>Осмотр по 36 пунктам</h3><p>Полный акт дефектовки после каждого обслуживания.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Призыв к действию -->
+    <section class="section">
+        <div class="container contact-bar">
+            <i class="fas fa-wrench" style="font-size: 3rem; color: #e67e22;"></i>
+            <h3 style="font-size: 1.8rem; margin: 16px 0;">Нужно выездное ТО?</h3>
+            <p>Позвоните — рассчитаем стоимость за 5 минут и подберем удобное время выезда</p>
+            <div class="contact-buttons">
+                <a href="tel:89129219797" class="btn btn-primary" style="background: #e67e22;"><i class="fas fa-phone-alt"></i> 8 912 921-97-97</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2025 ООО «СММ» — Выездное ТО спецтехники. Работаем с вашими или своими расходными материалами. Тюмень и Тюменская область.</p>
+        <p style="margin-top: 12px;"><i class="fas fa-map-pin"></i> Склад и цех: п. Боровский, ул. Герцена 105а/1 | Работаем и в цеху, и в поле</p>
+        <p><a href="tel:89129219797" style="color:#e67e22;">8 912 921-97-97</a> | <a href="https://ooo-smm.ru" style="color:#94a3b8;">Основной сайт</a></p>
+    </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutomotiveBusiness",
+  "name": "ООО СММ - выездное ТО спецтехники",
+  "description": "Выездное техническое обслуживание экскаваторов, погрузчиков, бульдозеров. Осмотр по 36 пунктам. Работаем с вашими материалами или предоставляем свои.",
+  "telephone": "89129219797",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Герцена 105а/1",
+    "addressLocality": "Боровский",
+    "addressRegion": "Тюменская область",
+    "addressCountry": "RU"
+  },
+  "priceRange": "от 5500₽",
+  "areaServed": "Тюменская область"
+}
+</script>
+</body>
+</html>
