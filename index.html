@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>ООО СММ | Профессиональное обслуживание спецтехники</title>
-    <meta name="description" content="Выездное техническое обслуживание спецтехники. Работаем с вашими материалами или предоставляем свои. Осмотр по 36 пунктам. Тюмень и область.">
-    <meta name="keywords" content="то спецтехники, выездное то, обслуживание экскаваторов, то погрузчиков, то бульдозеров, замена масла">
+    <title>ООО СММ | Профессиональное обслуживание спецтехники | Калькулятор ТО</title>
+    <meta name="description" content="Выездное техническое обслуживание спецтехники. Работаем с вашими материалами или предоставляем свои. Осмотр по 36 пунктам. Калькулятор стоимости ТО. Тюмень и область.">
+    <meta name="keywords" content="то спецтехники, выездное то, обслуживание экскаваторов, то погрузчиков, то бульдозеров, калькулятор то, замена масла">
     <meta name="author" content="ООО СММ">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://tosmm.ru">
     
-    <meta property="og:title" content="ООО СММ | Обслуживание спецтехники">
-    <meta property="og:description" content="Выездное техническое обслуживание спецтехники. Честные цены, понятные условия.">
+    <meta property="og:title" content="ООО СММ | Обслуживание спецтехники | Калькулятор ТО">
+    <meta property="og:description" content="Выездное техническое обслуживание спецтехники. Калькулятор стоимости ТО. Честные цены, понятные условия.">
     <meta property="og:type" content="website">
     
     <meta name="theme-color" content="#2c7da0">
@@ -62,6 +62,17 @@
             background: #236b8a;
         }
         
+        .btn-outline-calc {
+            background: transparent;
+            border: 1px solid #e67e22;
+            color: #e67e22;
+        }
+        
+        .btn-outline-calc:hover {
+            background: #e67e22;
+            color: white;
+        }
+        
         /* Header */
         .header {
             background: white;
@@ -92,6 +103,13 @@
             color: #e67e22;
         }
         
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        
         .contact-phone {
             font-weight: 500;
             font-size: 1.1rem;
@@ -106,6 +124,24 @@
         .contact-phone i {
             color: #2c7da0;
             margin-right: 6px;
+        }
+        
+        .calc-nav-btn {
+            background: #e67e22;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .calc-nav-btn:hover {
+            background: #d46b1a;
         }
         
         /* Hero */
@@ -326,36 +362,14 @@
             color: #5a6e6e;
             font-size: 0.85rem;
             margin-bottom: 8px;
-            line-height: 1.4;
+            line-height: 1.45;
         }
         
-        /* Table */
-        .reg-table {
-            width: 100%;
-            border-collapse: collapse;
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid #eef2f2;
-            font-size: 0.85rem;
-        }
-        
-        .reg-table th {
-            background: #fafcfc;
-            padding: 12px 16px;
-            font-weight: 600;
-            color: #2c7da0;
-            border-bottom: 1px solid #eef2f2;
-            text-align: center;
-        }
-        
-        .reg-table td {
-            padding: 10px 16px;
-            border-bottom: 1px solid #eef2f2;
-        }
-        
-        .reg-table tr:last-child td {
-            border-bottom: none;
+        .to-item .to-note {
+            font-size: 0.8rem;
+            color: #e67e22;
+            margin-top: 8px;
+            font-style: normal;
         }
         
         /* Service list */
@@ -427,6 +441,132 @@
             border-color: #2c7da0;
         }
         
+        /* Calculator Section */
+        .calculator-section {
+            background: #fafcfc;
+            scroll-margin-top: 80px;
+        }
+        
+        /* Calculator styles */
+        .calc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+        
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .input-group label {
+            font-weight: 600;
+            color: #2c7da0;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        select, input {
+            padding: 12px 16px;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-family: inherit;
+            background: white;
+            transition: all 0.2s;
+        }
+        
+        select:hover, input:hover {
+            border-color: #2c7da0;
+        }
+        
+        select:focus, input:focus {
+            outline: none;
+            border-color: #2c7da0;
+            box-shadow: 0 0 0 3px rgba(44,125,160,0.1);
+        }
+        
+        .result-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+            border-radius: 20px;
+            padding: 24px;
+            border: 1px solid #e2e8f0;
+            position: relative;
+        }
+        
+        .result-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .result-row:last-child {
+            border-bottom: none;
+        }
+        
+        .result-label {
+            font-weight: 500;
+            color: #4a627a;
+        }
+        
+        .result-value {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        
+        .total-row {
+            background: #2c7da0;
+            margin: 0 -24px -24px -24px;
+            padding: 20px 24px;
+            border-radius: 0 0 20px 20px;
+            color: white;
+        }
+        
+        .total-row .result-label {
+            color: white;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .total-row .result-value {
+            font-size: 1.5rem;
+            font-weight: 800;
+        }
+        
+        .material-note {
+            font-size: 0.7rem;
+            color: #e67e22;
+            margin-top: 12px;
+            text-align: center;
+            padding: 6px 12px;
+            background: #fff5e8;
+            border-radius: 20px;
+            display: inline-block;
+            width: auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .material-note-wrapper {
+            text-align: center;
+            margin-top: 12px;
+        }
+        
+        .validity-info {
+            margin-top: 16px;
+            padding: 12px;
+            background: #e8f0fe;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #2c7da0;
+            font-weight: 500;
+        }
+        
         /* Contact bar */
         .contact-bar {
             background: #2c7da0;
@@ -469,7 +609,7 @@
         
         /* Responsive */
         @media (max-width: 768px) {
-            .hero-grid, .two-options {
+            .hero-grid, .two-options, .calc-grid {
                 grid-template-columns: 1fr;
             }
             
@@ -493,12 +633,27 @@
             .to-details {
                 grid-template-columns: 1fr;
             }
+            
+            .header-right {
+                width: 100%;
+                justify-content: space-between;
+            }
         }
         
         @media (max-width: 480px) {
             .cards-grid {
                 grid-template-columns: 1fr;
             }
+        }
+        
+        .calc-nav-btn i {
+            font-size: 0.9rem;
+        }
+        
+        .formula-hint {
+            font-size: 0.75rem;
+            color: #8a9bb0;
+            margin-top: 4px;
         }
     </style>
 </head>
@@ -507,7 +662,10 @@
 <header class="header">
     <div class="container header-inner">
         <div class="logo">ООО <span>СММ</span></div>
-        <a href="tel:89129219797" class="contact-phone"><i class="fas fa-phone-alt"></i> 8 912 921-97-97</a>
+        <div class="header-right">
+            <a href="#calculator" class="calc-nav-btn"><i class="fas fa-calculator"></i> Калькулятор</a>
+            <a href="tel:89129219797" class="contact-phone"><i class="fas fa-phone-alt"></i> 8 912 921-97-97</a>
+        </div>
     </div>
 </header>
 
@@ -534,13 +692,15 @@
         </div>
     </section>
 
-    <!-- Виды техники (краны убраны) -->
+    <!-- Виды техники -->
     <section class="section">
         <div class="container">
             <h2 class="section-title">Обслуживаемая техника</h2>
             <div class="tech-grid">
                 <span class="tech-tag">Экскаваторы</span>
                 <span class="tech-tag">Погрузчики</span>
+                <span class="tech-tag">Вилочные погрузчики</span>
+                <span class="tech-tag">Экскаваторы-погрузчики</span>
                 <span class="tech-tag">Бульдозеры</span>
                 <span class="tech-tag">Мини-погрузчики</span>
                 <span class="tech-tag">Гусеничная техника</span>
@@ -588,56 +748,57 @@
     <section class="section">
         <div class="container">
             <h2 class="section-title">Регламент обслуживания</h2>
-            <div class="section-sub">Периодичность и состав работ согласно нормативам производителей</div>
+            <div class="section-sub">Периодичность и состав работ — всё прозрачно и понятно</div>
             
             <div class="to-details">
                 <div class="to-item">
                     <h4>ТО‑50</h4>
                     <span class="to-hours">50 моточасов</span>
-                    <p><strong>Состав работ:</strong> замена масла и фильтра двигателя, проверка болтовых соединений, осмотр узлов.</p>
-                    <p><strong>Цель:</strong> первое обслуживание после обкатки или сезонного запуска.</p>
+                    <p><strong>Что делаем:</strong> меняем масло в двигателе и масляный фильтр, проверяем болтовые соединения, осматриваем основные узлы.</p>
+                    <p><strong>Зачем:</strong> это первое обслуживание после обкатки или сезонного запуска. Техника только начала работать — важно убедиться, что всё в порядке.</p>
                 </div>
                 
                 <div class="to-item">
                     <h4>ТО‑250</h4>
                     <span class="to-hours">250 моточасов</span>
-                    <p><strong>Состав работ:</strong> замена масла и фильтра двигателя, смазка шарниров, осмотр систем.</p>
-                    <p><strong>Цель:</strong> базовое профилактическое обслуживание.</p>
+                    <p><strong>Что делаем:</strong> меняем масло и фильтр двигателя, смазываем шарниры и подшипники, проверяем работу основных систем.</p>
+                    <p><strong>Зачем:</strong> базовая профилактика, чтобы техника не подводила в самый ответственный момент.</p>
                 </div>
                 
                 <div class="to-item">
                     <h4>ТО‑500</h4>
                     <span class="to-hours">500 моточасов</span>
-                    <p><strong>Состав работ:</strong> замена масла в двигателе, замена топливного фильтра, диагностика гидравлики и КПП.</p>
-                    <p><strong>Цель:</strong> расширенное обслуживание, подготовка к интенсивной эксплуатации.</p>
+                    <p><strong>Что делаем:</strong> меняем масло в двигателе и топливный фильтр. <strong>Проверяем уровень и состояние масла в коробке передач (КПП), проверяем работу гидравлической системы</strong> — насосы, цилиндры, шланги.</p>
+                    <p><strong>Зачем:</strong> к этому моменту важно убедиться, что КПП и гидравлика работают штатно. Своевременная проверка помогает избежать дорогого ремонта.</p>
                 </div>
                 
                 <div class="to-item">
                     <h4>ТО‑750</h4>
                     <span class="to-hours">750 моточасов</span>
-                    <p><strong>Состав работ:</strong> замена масла и фильтра двигателя, контрольный осмотр всех узлов.</p>
-                    <p><strong>Цель:</strong> промежуточный контроль состояния техники.</p>
+                    <p><strong>Что делаем:</strong> меняем масло и фильтр двигателя, проводим контрольный осмотр всех узлов — проверяем, нет ли подтеканий, люфтов, посторонних шумов.</p>
+                    <p><strong>Зачем:</strong> промежуточный «чек-ап», чтобы быть уверенными: техника в порядке и готова к работе.</p>
                 </div>
                 
                 <div class="to-item">
                     <h4>ТО‑1000</h4>
                     <span class="to-hours">1000 моточасов</span>
-                    <p><strong>Состав работ:</strong> полная замена всех масел (двигатель, КПП, редуктора, гидравлика), замена всех фильтров, регулировка клапанов.</p>
-                    <p><strong>Цель:</strong> капитальное обслуживание, продление ресурса техники.</p>
+                    <p><strong>Что делаем:</strong> меняем масло в двигателе, коробке передач, редукторах, гидравлике. Меняем все фильтры. Проводим полную диагностику.</p>
+                    <p><strong>Регулировка клапанов</strong> — выполняется по необходимости. Если двигатель работает ровно и без посторонних звуков, этот этап можно отложить. В любом случае, мы проверим и посоветуем.</p>
+                    <p><strong>Зачем:</strong> крупное обслуживание, которое продлевает ресурс техники и готовит её к следующему циклу интенсивной работы.</p>
                 </div>
                 
                 <div class="to-item">
                     <h4>ТО‑1500</h4>
                     <span class="to-hours">1500 моточасов</span>
-                    <p><strong>Состав работ:</strong> комплексная диагностика, замена масел и фильтров по регламенту.</p>
-                    <p><strong>Цель:</strong> расширенная диагностика перед крупным ТО.</p>
+                    <p><strong>Что делаем:</strong> комплексная диагностика всех систем, замена масел и фильтров по регламенту.</p>
+                    <p><strong>Зачем:</strong> расширенная проверка перед следующим крупным ТО. Убеждаемся, что все узлы работают корректно.</p>
                 </div>
                 
                 <div class="to-item">
                     <h4>ТО‑2000</h4>
                     <span class="to-hours">2000 моточасов</span>
-                    <p><strong>Состав работ:</strong> полное обслуживание всех узлов и агрегатов, замена всех масел и фильтров, сезонная подготовка.</p>
-                    <p><strong>Цель:</strong> капитальное обслуживание, подготовка к следующему циклу эксплуатации.</p>
+                    <p><strong>Что делаем:</strong> полное обслуживание всех узлов и агрегатов, замена всех масел и фильтров, сезонная подготовка (подготовка к зиме или летнему сезону).</p>
+                    <p><strong>Зачем:</strong> капитальное обслуживание. После него техника готова работать без сбоёв следующие 2000 моточасов.</p>
                 </div>
             </div>
         </div>
@@ -692,6 +853,104 @@
         </div>
     </section>
 
+    <!-- КАЛЬКУЛЯТОР -->
+    <section id="calculator" class="section calculator-section">
+        <div class="container">
+            <h2 class="section-title">🧮 Калькулятор стоимости ТО</h2>
+            <div class="section-sub">Рассчитайте ориентировочную стоимость обслуживания за 1 минуту</div>
+            
+            <div class="calc-grid">
+                <div class="input-group">
+                    <label>Вид техники</label>
+                    <select id="techType">
+                        <option value="excavator">Экскаватор</option>
+                        <option value="loader">Погрузчик</option>
+                        <option value="forklift">Вилочный погрузчик</option>
+                        <option value="backhoe">Экскаватор-погрузчик</option>
+                        <option value="bulldozer">Бульдозер</option>
+                        <option value="miniloader">Мини-погрузчик</option>
+                    </select>
+                </div>
+                
+                <div class="input-group">
+                    <label>Тип ТО</label>
+                    <select id="toType">
+                        <option value="50">ТО-50 (50 м.ч.)</option>
+                        <option value="250">ТО-250 (250 м.ч.)</option>
+                        <option value="500" selected>ТО-500 (500 м.ч.)</option>
+                        <option value="750">ТО-750 (750 м.ч.)</option>
+                        <option value="1000">ТО-1000 (1000 м.ч.)</option>
+                        <option value="1500">ТО-1500 (1500 м.ч.)</option>
+                        <option value="2000">ТО-2000 (2000 м.ч.)</option>
+                    </select>
+                </div>
+                
+                <div class="input-group">
+                    <label>Вариант работ</label>
+                    <select id="workOption">
+                        <option value="client">С материалами заказчика</option>
+                        <option value="our">С нашими материалами</option>
+                    </select>
+                </div>
+                
+                <div class="input-group">
+                    <label>Зона выезда</label>
+                    <select id="travelZone">
+                        <option value="city">По городу Тюмень (5 000 ₽)</option>
+                        <option value="region">За город (Тюменская область)</option>
+                    </select>
+                </div>
+                
+                <div class="input-group" id="distanceGroup" style="display: none;">
+                    <label>📏 Расстояние до объекта</label>
+                    <input type="number" id="distance" value="50" step="10" min="0">
+                    <div class="formula-hint">километров (в одну сторону)</div>
+                </div>
+            </div>
+            
+            <div class="result-card">
+                <div class="result-row">
+                    <span class="result-label">📊 Норматив трудоемкости</span>
+                    <span class="result-value" id="laborHours">0.0</span>
+                </div>
+                <div class="result-row">
+                    <span class="result-label">💰 Стоимость нормо-часа</span>
+                    <span class="result-value">2 000 ₽</span>
+                </div>
+                <div class="result-row">
+                    <span class="result-label">🔧 Стоимость работ</span>
+                    <span class="result-value" id="workCost">0 ₽</span>
+                </div>
+                <div class="result-row">
+                    <span class="result-label">🚚 Выезд бригады</span>
+                    <span class="result-value" id="travelCost">0 ₽</span>
+                </div>
+                <div class="result-row" id="materialRow">
+                    <span class="result-label">🛢️ Расходные материалы</span>
+                    <span class="result-value" id="materialCost">0 ₽</span>
+                </div>
+                <div class="result-row" style="background: #f8f9fa; margin: 0 -24px; padding: 12px 24px;">
+                    <span class="result-label">📌 НДС 22%</span>
+                    <span class="result-value" id="vatAmount">0 ₽</span>
+                </div>
+                <div class="total-row">
+                    <div style="display: flex; justify-content: space-between;">
+                        <span class="result-label">💵 ИТОГО с НДС 22%</span>
+                        <span class="result-value" id="totalCost">0 ₽</span>
+                    </div>
+                </div>
+                <!-- Пометка о цене вынесена отдельно и не зависит от масштаба -->
+                <div id="materialNoteWrapper" class="material-note-wrapper" style="display: none;">
+                    <div class="material-note">*цена ориентировочная, подробнее у менеджера</div>
+                </div>
+            </div>
+            
+            <div class="validity-info">
+                📅 Калькулятор актуален до <strong>июля 2026 года</strong>
+            </div>
+        </div>
+    </section>
+
     <!-- Контакт -->
     <section class="section">
         <div class="container contact-bar">
@@ -711,5 +970,118 @@
     </div>
 </footer>
 
+<script>
+    // Стоимость нормо-часа (фиксированная)
+    const RATE_PER_HOUR = 2000;
+    
+    // Стоимость выезда по городу
+    const CITY_TRAVEL_COST = 5000;
+    
+    // Стоимость 1 км за городом
+    const KM_RATE = 30;
+    
+    // Ставка НДС 22%
+    const VAT_RATE = 0.22;
+    
+    // Коэффициенты для расчета материалов (от 60% до 100% от стоимости работ)
+    const MATERIAL_MIN_COEFF = 0.6;
+    const MATERIAL_MAX_COEFF = 1.0;
+    
+    // Базовые нормативы трудоемкости (человеко-часов)
+    const baseLaborStandards = {
+        excavator: { 50: 2.5, 250: 4.5, 500: 6.5, 750: 4.5, 1000: 10.0, 1500: 7.5, 2000: 14.0 },
+        loader: { 50: 2.0, 250: 4.0, 500: 6.0, 750: 4.0, 1000: 9.0, 1500: 7.0, 2000: 12.0 },
+        forklift: { 50: 1.5, 250: 3.0, 500: 4.5, 750: 3.0, 1000: 7.0, 1500: 5.5, 2000: 9.0 },
+        backhoe: { 50: 2.8, 250: 5.0, 500: 7.0, 750: 5.0, 1000: 11.0, 1500: 8.0, 2000: 15.0 },
+        bulldozer: { 50: 3.0, 250: 5.5, 500: 7.5, 750: 5.5, 1000: 12.0, 1500: 8.5, 2000: 16.0 },
+        miniloader: { 50: 1.5, 250: 3.0, 500: 4.5, 750: 3.0, 1000: 7.0, 1500: 5.5, 2000: 9.0 }
+    };
+    
+    function getLaborHours(techType, toValue) {
+        return baseLaborStandards[techType][toValue];
+    }
+    
+    function getMaterialCostRange(techType, toValue) {
+        const laborHours = getLaborHours(techType, toValue);
+        const baseWorkCost = laborHours * RATE_PER_HOUR;
+        const minMaterial = Math.round(baseWorkCost * MATERIAL_MIN_COEFF);
+        const maxMaterial = Math.round(baseWorkCost * MATERIAL_MAX_COEFF);
+        return `от ${minMaterial.toLocaleString('ru-RU')} до ${maxMaterial.toLocaleString('ru-RU')} ₽`;
+    }
+    
+    function getMinMaterialCost(techType, toValue) {
+        const laborHours = getLaborHours(techType, toValue);
+        const baseWorkCost = laborHours * RATE_PER_HOUR;
+        return Math.round(baseWorkCost * MATERIAL_MIN_COEFF);
+    }
+    
+    function toggleDistanceField() {
+        const travelZone = document.getElementById('travelZone').value;
+        const distanceGroup = document.getElementById('distanceGroup');
+        distanceGroup.style.display = travelZone === 'region' ? 'block' : 'none';
+    }
+    
+    function updateCalculator() {
+        const techType = document.getElementById('techType').value;
+        const toValue = parseInt(document.getElementById('toType').value);
+        const workOption = document.getElementById('workOption').value;
+        const travelZone = document.getElementById('travelZone').value;
+        
+        let laborHours = getLaborHours(techType, toValue);
+        const workCost = laborHours * RATE_PER_HOUR;
+        
+        let travelCost = 0;
+        if (travelZone === 'city') {
+            travelCost = CITY_TRAVEL_COST;
+        } else {
+            const distance = parseFloat(document.getElementById('distance').value) || 0;
+            travelCost = KM_RATE * distance * 2;
+        }
+        
+        let materialCost = 0;
+        let materialDisplay = '';
+        const materialNoteWrapper = document.getElementById('materialNoteWrapper');
+        
+        if (workOption === 'our') {
+            materialDisplay = getMaterialCostRange(techType, toValue);
+            materialCost = getMinMaterialCost(techType, toValue);
+            materialNoteWrapper.style.display = 'block';
+        } else {
+            materialDisplay = '0 ₽ (ваши материалы)';
+            materialCost = 0;
+            materialNoteWrapper.style.display = 'none';
+        }
+        
+        const subtotal = workCost + travelCost + materialCost;
+        const vatAmount = subtotal * VAT_RATE;
+        const totalWithVat = subtotal + vatAmount;
+        
+        document.getElementById('laborHours').innerHTML = laborHours.toFixed(1) + ' чел.-ч.';
+        document.getElementById('workCost').innerHTML = workCost.toLocaleString('ru-RU') + ' ₽';
+        document.getElementById('travelCost').innerHTML = travelCost.toLocaleString('ru-RU') + ' ₽';
+        document.getElementById('materialCost').innerHTML = materialDisplay;
+        document.getElementById('vatAmount').innerHTML = vatAmount.toLocaleString('ru-RU') + ' ₽';
+        document.getElementById('totalCost').innerHTML = totalWithVat.toLocaleString('ru-RU') + ' ₽';
+        
+        const materialRow = document.getElementById('materialRow');
+        if (workOption === 'client') {
+            materialRow.style.opacity = '0.6';
+        } else {
+            materialRow.style.opacity = '1';
+        }
+    }
+    
+    document.getElementById('techType').addEventListener('change', updateCalculator);
+    document.getElementById('toType').addEventListener('change', updateCalculator);
+    document.getElementById('workOption').addEventListener('change', updateCalculator);
+    document.getElementById('travelZone').addEventListener('change', () => {
+        toggleDistanceField();
+        updateCalculator();
+    });
+    document.getElementById('distance').addEventListener('input', updateCalculator);
+    
+    toggleDistanceField();
+    updateCalculator();
+</script>
 </body>
 </html>
