@@ -13,10 +13,69 @@
     <meta property="og:title" content="ООО СММ | Обслуживание спецтехники | Калькулятор ТО">
     <meta property="og:description" content="Выездное техническое обслуживание спецтехники. Калькулятор стоимости ТО. Честные цены, понятные условия.">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tosmm.ru">
+    <meta property="og:image" content="https://tosmm.ru/og-image.jpg">
     
     <meta name="theme-color" content="#2c7da0">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Yandex Metrica + Webvisor -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    
+        ym(99999999, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true,      // Включает Вебвизор — запись сессий и действий пользователей
+            ecommerce: false
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/99999999" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex Metrica -->
+    
+    <!-- Schema.org разметка для локального бизнеса (SEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutomotiveBusiness",
+      "name": "ООО СММ",
+      "alternateName": "СММ - техническое обслуживание спецтехники",
+      "description": "Выездное техническое обслуживание спецтехники в Тюмени и области. ТО экскаваторов, погрузчиков, бульдозеров. Работа с вашими материалами или под ключ.",
+      "url": "https://tosmm.ru",
+      "telephone": "+79129219797",
+      "email": "info@tosmm.ru",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ул. Герцена 105а/1",
+        "addressLocality": "п. Боровский",
+        "addressRegion": "Тюменская область",
+        "addressCountry": "RU"
+      },
+      "priceRange": "₽₽",
+      "openingHours": "Mo-Fr 09:00-18:00",
+      "areaServed": {
+        "@type": "City",
+        "name": "Тюмень"
+      },
+      "serviceType": ["Техническое обслуживание спецтехники", "Выездное ТО", "Замена масла", "Диагностика"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Услуги ТО",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "ТО-50" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "ТО-250" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "ТО-500" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "ТО-1000" } }
+        ]
+      }
+    }
+    </script>
     
     <style>
         * {
@@ -755,50 +814,43 @@
                     <h4>ТО‑50</h4>
                     <span class="to-hours">50 моточасов</span>
                     <p><strong>Что делаем:</strong> меняем масло в двигателе и масляный фильтр, проверяем болтовые соединения, осматриваем основные узлы.</p>
-                    <p><strong>Зачем:</strong> это первое обслуживание после обкатки или сезонного запуска. Техника только начала работать — важно убедиться, что всё в порядке.</p>
+                    <p><strong>Зачем:</strong> первое обслуживание после обкатки или сезонного запуска.</p>
                 </div>
-                
                 <div class="to-item">
                     <h4>ТО‑250</h4>
                     <span class="to-hours">250 моточасов</span>
-                    <p><strong>Что делаем:</strong> меняем масло и фильтр двигателя, смазываем шарниры и подшипники, проверяем работу основных систем.</p>
-                    <p><strong>Зачем:</strong> базовая профилактика, чтобы техника не подводила в самый ответственный момент.</p>
+                    <p><strong>Что делаем:</strong> меняем масло и фильтр двигателя, смазываем шарниры, проверяем системы.</p>
+                    <p><strong>Зачем:</strong> базовая профилактика, чтобы техника не подводила.</p>
                 </div>
-                
                 <div class="to-item">
                     <h4>ТО‑500</h4>
                     <span class="to-hours">500 моточасов</span>
-                    <p><strong>Что делаем:</strong> меняем масло в двигателе и топливный фильтр. <strong>Проверяем уровень и состояние масла в коробке передач (КПП), проверяем работу гидравлической системы</strong> — насосы, цилиндры, шланги.</p>
-                    <p><strong>Зачем:</strong> к этому моменту важно убедиться, что КПП и гидравлика работают штатно. Своевременная проверка помогает избежать дорогого ремонта.</p>
+                    <p><strong>Что делаем:</strong> масло в двигателе, топливный фильтр, проверка КПП и гидравлики.</p>
+                    <p><strong>Зачем:</strong> контроль коробки и гидравлики — избегаем дорогого ремонта.</p>
                 </div>
-                
                 <div class="to-item">
                     <h4>ТО‑750</h4>
                     <span class="to-hours">750 моточасов</span>
-                    <p><strong>Что делаем:</strong> меняем масло и фильтр двигателя, проводим контрольный осмотр всех узлов — проверяем, нет ли подтеканий, люфтов, посторонних шумов.</p>
-                    <p><strong>Зачем:</strong> промежуточный «чек-ап», чтобы быть уверенными: техника в порядке и готова к работе.</p>
+                    <p><strong>Что делаем:</strong> замена масла/фильтра, осмотр всех узлов на предмет подтеканий и люфтов.</p>
+                    <p><strong>Зачем:</strong> промежуточный «чек-ап» для уверенности.</p>
                 </div>
-                
                 <div class="to-item">
                     <h4>ТО‑1000</h4>
                     <span class="to-hours">1000 моточасов</span>
-                    <p><strong>Что делаем:</strong> меняем масло в двигателе, коробке передач, редукторах, гидравлике. Меняем все фильтры. Проводим полную диагностику.</p>
-                    <p><strong>Регулировка клапанов</strong> — выполняется по необходимости. Если двигатель работает ровно и без посторонних звуков, этот этап можно отложить. В любом случае, мы проверим и посоветуем.</p>
-                    <p><strong>Зачем:</strong> крупное обслуживание, которое продлевает ресурс техники и готовит её к следующему циклу интенсивной работы.</p>
+                    <p><strong>Что делаем:</strong> масло в двигателе, КПП, редукторах, гидравлике, все фильтры, диагностика.</p>
+                    <p><strong>Зачем:</strong> продлевает ресурс, готовит к интенсивной работе.</p>
                 </div>
-                
                 <div class="to-item">
                     <h4>ТО‑1500</h4>
                     <span class="to-hours">1500 моточасов</span>
-                    <p><strong>Что делаем:</strong> комплексная диагностика всех систем, замена масел и фильтров по регламенту.</p>
-                    <p><strong>Зачем:</strong> расширенная проверка перед следующим крупным ТО. Убеждаемся, что все узлы работают корректно.</p>
+                    <p><strong>Что делаем:</strong> комплексная диагностика, замена масел и фильтров.</p>
+                    <p><strong>Зачем:</strong> расширенная проверка перед крупным ТО.</p>
                 </div>
-                
                 <div class="to-item">
                     <h4>ТО‑2000</h4>
                     <span class="to-hours">2000 моточасов</span>
-                    <p><strong>Что делаем:</strong> полное обслуживание всех узлов и агрегатов, замена всех масел и фильтров, сезонная подготовка (подготовка к зиме или летнему сезону).</p>
-                    <p><strong>Зачем:</strong> капитальное обслуживание. После него техника готова работать без сбоёв следующие 2000 моточасов.</p>
+                    <p><strong>Что делаем:</strong> полное обслуживание всех узлов, замена всех масел и фильтров, сезонная подготовка.</p>
+                    <p><strong>Зачем:</strong> капитальное ТО для следующих 2000 моточасов.</p>
                 </div>
             </div>
         </div>
@@ -939,7 +991,6 @@
                         <span class="result-value" id="totalCost">0 ₽</span>
                     </div>
                 </div>
-                <!-- Пометка о цене вынесена отдельно и не зависит от масштаба -->
                 <div id="materialNoteWrapper" class="material-note-wrapper" style="display: none;">
                     <div class="material-note">*цена ориентировочная, подробнее у менеджера</div>
                 </div>
@@ -966,28 +1017,18 @@
     <div class="container">
         <p>ООО «СММ» — Выездное техническое обслуживание спецтехники</p>
         <p>📍 Тюменская область, п. Боровский, ул. Герцена 105а/1</p>
-        <p>📞 <a href="tel:89129219797">8 912 921-97-97</a> | 🌐 tosmm.ru</p>
+        <p>📞 <a href="tel:89129219797">8 912 921-97-97</a> | 🌐 tosmm.ru | <a href="mailto:info@tosmm.ru">info@tosmm.ru</a></p>
     </div>
 </footer>
 
 <script>
-    // Стоимость нормо-часа (фиксированная)
     const RATE_PER_HOUR = 2000;
-    
-    // Стоимость выезда по городу
     const CITY_TRAVEL_COST = 5000;
-    
-    // Стоимость 1 км за городом
     const KM_RATE = 30;
-    
-    // Ставка НДС 22%
     const VAT_RATE = 0.22;
-    
-    // Коэффициенты для расчета материалов (от 60% до 100% от стоимости работ)
     const MATERIAL_MIN_COEFF = 0.6;
     const MATERIAL_MAX_COEFF = 1.0;
     
-    // Базовые нормативы трудоемкости (человеко-часов)
     const baseLaborStandards = {
         excavator: { 50: 2.5, 250: 4.5, 500: 6.5, 750: 4.5, 1000: 10.0, 1500: 7.5, 2000: 14.0 },
         loader: { 50: 2.0, 250: 4.0, 500: 6.0, 750: 4.0, 1000: 9.0, 1500: 7.0, 2000: 12.0 },
